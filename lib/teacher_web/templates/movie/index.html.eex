@@ -1,0 +1,16 @@
+<%= link "New movie", to: movie_path(@conn, :new) %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Summary</th>
+      <th>Year</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  <%= render_many @movies, TeacherWeb.MovieView, "_movie.html", conn: @conn %>
+  </tbody>
+</table>

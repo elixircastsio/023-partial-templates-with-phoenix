@@ -1,0 +1,7 @@
+<div class="nav-header">
+  <h1>Movie App</h1>
+  <div class="nav-link">
+    <%= link "All Movies", to: movie_path(@conn, :index) %>
+    <%= link "About", to: page_path(@conn, :about) %>
+  </div>
+</div>

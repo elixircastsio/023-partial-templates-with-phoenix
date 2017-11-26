@@ -1,0 +1,16 @@
+<tr>
+  <td><%= @movie.title %></td>
+  <td><%= @movie.summary %></td>
+  <td><%= @movie.year %></td>
+
+  <td class="text-right">
+    <%= link "Show", to: movie_path(@conn, :show, @movie),
+                     class: "btn btn-default btn-xs" %>
+    <%= link "Edit", to: movie_path(@conn, :edit, @movie),
+                     class: "btn btn-default btn-xs" %>
+    <%= link "Delete", to: movie_path(@conn, :delete, @movie),
+                       method: :delete,
+                       data: [confirm: "Are you sure?"],
+                       class: "btn btn-danger btn-xs" %>
+  </td>
+</tr>
